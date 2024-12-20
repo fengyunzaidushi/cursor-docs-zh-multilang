@@ -1,0 +1,21 @@
+1|看到yarn dev运行时报错，这是因为YAML front matter的格式问题。
+2|
+3|错误信息显示:
+4|"YAMLParseError: Unexpected scalar at node end at line 2, column 13"
+5|
+6|这通常是因为YAML front matter中的特殊字符（如@）没有被正确处理。
+7|我们需要用引号把含有特殊字符的值包起来。
+8|
+9|让我修改front matter的格式... 
+10|
+11|让我帮您写一个正则表达式来匹配和替换YAML front matter中的title值。
+12|
+13|需要匹配的模式:
+14|1. title: 后面跟着@开头的中文
+15|2. 需要给整个值加上双引号
+16|
+17|正则表达式分析:
+18|1. 查找模式: 需要匹配 title: "@xxx"
+19|2. 替换模式: 需要变成 title: '@xxx'
+20|
+21|让我写出具体的正则... 

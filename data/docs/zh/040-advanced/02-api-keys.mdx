@@ -1,0 +1,41 @@
+---
+title: 自定义 API 密钥
+---
+
+### OpenAI API 密钥
+
+Cursor 允许您输入自己的 OpenAI API 密钥，以便按自己的费用发送任意数量的 AI 消息。
+
+您可以从 [这里](https://platform.openai.com/account/api-keys) 获取自己的 API 密钥。要使用自己的 API 密钥，请转到 `Cursor 设置` > `模型` > `OpenAI API 密钥` 并输入您的 API 密钥。然后，点击“验证”按钮。一旦您的密钥被验证，您的 OpenAI API 密钥将被启用。
+
+<Frame>
+  <img src="/images/misc/openai-api.png" />
+</Frame>
+
+### Anthropic API 密钥
+
+与 OpenAI 类似，您也可以设置自己的 Anthropic API 密钥，以便按自己的费用使用基于 Claude 的模型。
+
+<Frame>
+  <img src="/images/misc/anthropic-api.png" />
+</Frame>
+
+### Google API 密钥
+
+对于 Google API 密钥，您可以设置自己的 API 密钥，以便按自己的费用使用 Google 模型，例如 `gemini-1.5-flash-500k`。
+
+<Frame>
+  <img src="/images/misc/google-api.png" />
+</Frame>
+
+### Azure 集成
+
+最后，您还可以设置自己的 Azure API 密钥，以便按自己的费用使用 Azure OpenAI 模型。
+
+<Frame>
+  <img src="/images/misc/azure-api.png" />
+</Frame>
+
+### 我的 API 密钥会被存储或离开我的设备吗？
+
+您的 API 密钥不会被存储，但它会在每个请求中发送到我们的服务器。所有请求都通过我们的后端路由，因为我们在这里进行最终的提示构建。

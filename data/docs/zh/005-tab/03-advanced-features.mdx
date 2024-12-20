@@ -1,0 +1,28 @@
+---
+title: 高级功能
+---
+
+### Peek 中的 Tab
+
+您还可以在“转到定义”或“转到类型定义”的 peek 视图中使用光标 Tab。这在例如向函数调用添加新参数时非常有用。
+
+<Frame>
+  <img src="/images/cpp/cpp-in-peek.png" />
+</Frame>
+
+我们特别喜欢在 vim 中结合使用`gd`，例如修改函数定义，然后一次性修复其所有用法。
+
+### <div className="flex items-center" style={{ gap: '6px' }}> <span className="cursor-pointer my-0">光标预测</span></div>
+
+光标还可以预测您在接受编辑后将要去的地方。
+如果可用，您将能够按 Tab 键转到下一个位置，从而允许您通过编辑进行 tab-tab-tab。
+
+<Frame caption="光标预测了下一个位置，并在此处建议了一个编辑。">
+  <img src="/images/cpp/cp.png" />
+</Frame>
+
+### <div className="flex items-center" style={{ gap: '6px' }}> <span className="cursor-pointer my-0">部分接受</span></div>
+
+您可以通过按`Ctrl/⌘`和右箭头（或将`editor.action.inlineSuggest.acceptNextWord`设置为您喜欢的快捷键）来接受建议的下一个单词。
+
+要启用部分接受，请导航到`光标设置` > `功能` > `光标Tab`。

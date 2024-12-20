@@ -1,0 +1,39 @@
+---
+title: 常见问题
+---
+
+#### 我在更新日志上看到更新，但 Cursor 不会更新。
+
+如果更新非常新，可能还没有向您推出。我们采用分阶段推出的方式，这意味着我们首先将新更新发布给少数随机选择的用户，然后再向所有人发布。通常，从第一个用户开始，达到所有用户大约需要 5 小时。对于较大的更新，可能需要更长时间。
+
+如果您不想等待，可以从我们的 [主页](https://cursor.com/) 重新下载 Cursor。您可能会立即收到最新更新。请放心，您的所有设置、扩展等都会转移到重新下载的版本中。您不必先卸载现有版本。
+
+#### 我在 Cursor 中登录 GitHub 时遇到问题 / 如何在 Cursor 中退出 GitHub？
+
+您可以尝试从命令面板 `Ctrl/⌘ + Shift + P` 使用 `退出 GitHub` 命令。
+
+#### 我无法使用 GitHub Codespaces。
+
+不幸的是，我们尚不支持 GitHub Codespaces。
+
+#### 我在连接远程 SSH 时遇到错误。
+
+目前，我们不支持 SSH 连接到 Windows 机器。如果您不是在使用 Windows 机器，请在 [论坛](https://forum.cursor.com/) 中向我们报告您的问题。提供一些日志将有助于更好地协助您。
+
+#### Cursor Tab 和 Cmd K 在我的公司代理后无法使用。
+
+Cursor Tab 和 Cmd K 默认使用 HTTP/2，这使我们能够以更低的延迟使用更少的资源。一些公司代理（例如某些配置中的 Zscaler）会阻止 HTTP/2。要解决此问题，您可以在设置中将 `"cursor.general.disableHttp2": true` 设置为 true（`Cmd/Ctrl + ,` 然后搜索 `http2`）。
+
+#### 我刚订阅了 Pro，但在应用中仍然是免费计划。
+
+尝试从 [设置](/get-started/migrate-from-vscode#cursor-settings) 登出并重新登录。
+
+#### 我的使用量何时会重置？
+
+如果您订阅了 Pro，您可以从 [仪表板](https://cursor.com/settings) 点击 `管理订阅`，您的计划续订日期将显示在顶部。
+
+如果您是免费用户，您可以查看您收到了第一封来自我们的电子邮件的日期。您的使用量将从该日期开始每月重置一次。
+
+#### 我如何卸载 Cursor？
+
+您可以按照 [此指南](https://code.visualstudio.com/docs/setup/uninstall) 卸载 Cursor。将每个 "VS Code" 或 "Code" 替换为 "Cursor"，将 ".vscode" 替换为 ".cursor"。

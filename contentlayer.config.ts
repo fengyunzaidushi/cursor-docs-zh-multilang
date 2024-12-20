@@ -219,8 +219,8 @@ export const Doc = defineDocumentType(() => ({
     description: { type: "string" },
     nav_title: { type: "string" },
     related: { type: "nested", of: LinksProperties,required:false},
-    toc: { type: "boolean", default: true },
-    published: { type: "boolean", default: true },
+    toc: { type: "boolean", default: false },
+    published: { type: "boolean", default: false },
   },
   computedFields: {
     ...computedFields,

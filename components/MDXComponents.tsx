@@ -5,14 +5,16 @@ import type { MDXComponents } from 'mdx/types'
 import NextImage from 'next/image'
 import CustomLink from './Link'
 import TableWrapper from './TableWrapper'
+import { Frame } from '@/components/Frame'
+import { Info } from '@/components/Info'
 
 const Image = ({ srcLight, srcDark, ...props }: any) => {
   // 使用 srcLight 作为默认图片源
   const src = srcLight || srcDark || props.src
-  
+
   // 确保路径以 / 开头
   const imageSrc = src.startsWith('/') ? src : `/${src}`
-  
+
   return (
     <div className="my-6">
       <NextImage
@@ -32,4 +34,6 @@ export const components: MDXComponents = {
   pre: Pre,
   table: TableWrapper,
   BlogNewsletterForm,
+  Frame,
+  Info,
 }

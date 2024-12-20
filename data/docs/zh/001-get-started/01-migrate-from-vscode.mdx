@@ -1,0 +1,37 @@
+---
+title: 从 VS Code 迁移
+---
+
+import { Frame } from "@/components/Frame";
+
+Cursor 是 VS Code 的一个分支。这使我们能够专注于创造与 AI 编码的最佳方式，同时提供熟悉的文本编辑体验。
+
+### 导入扩展、主题、设置和快捷键
+
+您可以通过一键将 VS Code 配置导入到 Cursor。导航到 `Cursor Settings` > `General` > `Account`。
+
+<Frame>
+  <img src="/images/get-started/vscode-import.png" />
+</Frame>
+
+### 保持更新
+
+我们定期将 Cursor 重新基于最新版本的 VS Code。
+
+### 为什么不使用扩展？
+
+作为一个独立应用程序，Cursor 对编辑器的 UI 有更大的控制权，从而实现更强的 AI 集成。我们的一些功能，如 Cursor Tab 和 CMD-K，作为现有编码环境的插件是无法实现的。
+
+### 设置
+
+您可以通过点击右上角的齿轮按钮，按 `Ctrl/⌘ + Shift + J`，或使用 `Ctrl/⌘ + Shift + P` 并输入 `Cursor Settings` 来打开 Cursor 特定的设置面板。
+
+您可以通过 `Ctrl/⌘ + Shift + P` 打开 VS Code 特定的设置，然后输入 `VS Code Settings`。
+
+### 为什么 Cursor 中的活动栏是水平的？
+
+<Frame>
+  <img src="/images/get-started/activity-bar.png" />
+</Frame>
+
+活动栏默认是水平的，以节省聊天空间。如果您更喜欢正常的垂直活动栏，可以前往 VS Code 设置，将 `workbench.activityBar.orientation` 设置为 `vertical`，然后重启 Cursor。

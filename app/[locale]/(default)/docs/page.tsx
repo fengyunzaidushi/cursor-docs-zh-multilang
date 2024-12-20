@@ -23,6 +23,42 @@ function formatDocPath(path: string, locale: string): string {
     return `/${locale}/docs/${formattedParts}`
 }
 
+// 添加获取数字前缀的辅助函数
+function getNumericPrefix(str: string): number {
+    const match = str.match(/^\d+/)
+    return match ? parseInt(match[0]) : Infinity
+}
+
+// 添加获取第一个文档的函数
+function findFirstDocument(docs: any[]): any {
+    // 按文件路径分组
+    const docsByFolder = docs.reduce((acc, doc) => {
+        const parts = doc.filePath.split('/')
+        const folder = parts[2] // docs/[folder]/file
+        if (!acc[folder]) {
+            acc[folder] = []
+        }
+        acc[folder].push(doc)
+        return acc
+    }, {} as Record<string, any[]>)
+
+    // 获取排序后的第一个文件夹
+    const firstFolder = Object.keys(docsByFolder)
+        .sort((a, b) => getNumericPrefix(a) - getNumericPrefix(b))[0]
+
+    if (!firstFolder || !docsByFolder[firstFolder].length) {
+        return null
+    }
+
+    // 在第一个文件夹中获取排序后的第一个文件
+    return docsByFolder[firstFolder]
+        .sort((a, b) => {
+            const aName = a.filePath.split('/').pop()
+            const bName = b.filePath.split('/').pop()
+            return getNumericPrefix(aName) - getNumericPrefix(bName)
+        })[0]
+}
+
 interface PageProps {
     params: Promise<{
         locale: string
@@ -38,8 +74,8 @@ export default async function DocsPage({ params }: PageProps) {
         return docLocale === resolvedParams.locale
     })
 
-    // 找到第一个文档作为默认重定向目标
-    const firstDoc = docs.find(doc => doc.filePath.includes('index.mdx'))
+    // 找到第一个文档
+    const firstDoc = findFirstDocument(docs)
 
     if (!firstDoc) {
         // 如果没有找到文档，重定向到 404 页面或首页

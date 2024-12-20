@@ -1,0 +1,27 @@
+---
+title: 带代码库
+---
+
+### 默认代码库聊天
+
+如果代码库未被 [索引](/context/codebase-indexing)，Cursor Chat 将首先尝试计算一些搜索查询，以便在您的代码库中进行搜索。为了更好的准确性，建议使用 [嵌入搜索](#embeddings-search)。
+
+<Frame>
+  <img src="/images/chat/no-embeddings.png" />
+</Frame>
+
+### 嵌入搜索
+
+通过 [代码库索引](/context/codebase-indexing)，Cursor Chat 可以根据您的代码库准确生成响应。
+
+在输入消息后按 `Ctrl/⌘ + Enter`，Cursor Chat 会扫描您的索引代码库，以查找相关代码片段。这通常适合快速包含代码片段，以便纳入对话的上下文。为了更好地控制代码库搜索并提高准确性，您可以使用 `@codebase`。
+
+<Frame>
+  <img src="/images/chat/embeddings.png" />
+</Frame>
+
+### 高级代码库搜索
+
+当使用 `@Codebase` 时，Cursor 代码库聊天会进行更详细的搜索。
+
+有关 `@Codebase` 的更多信息，请 [点击这里](/context/@-symbols/@-codebase)。

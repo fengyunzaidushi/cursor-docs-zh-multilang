@@ -1,0 +1,42 @@
+---
+title: 概述
+---
+
+Cursor Tab 是我们原生的自动补全功能。它是一个更强大的 Copilot，能够建议整个差异，并具有特别好的记忆。
+
+<Frame>
+  <video src="/images/cpp/cpp-full-video.mp4" autoPlay loop muted playsInline />
+</Frame>
+
+由自定义模型驱动，Cursor Tab 可以：
+
+- 在光标周围建议编辑，而不仅仅是插入额外的代码。
+- 同时修改多行。
+- 根据您最近的更改和 linter 错误提出建议。
+
+免费用户可以免费获得 2000 个建议。专业和商业计划可以获得无限建议。
+
+### 用户界面
+
+当 Cursor 仅添加额外文本时，补全将以灰色文本显示。如果建议修改现有代码，它将作为差异弹出窗口出现在您当前行的右侧。
+
+<Frame className="flex items-stretch justify-center">
+  <img
+    src="/images/cpp/ghost-text-example.png"
+    className="h-full object-cover"
+  />
+  <img
+    src="/images/cpp/preview-box-example.png"
+    className="h-full object-cover"
+  />
+</Frame>
+
+您可以通过按 `Tab` 接受建议，或通过按 `Esc` 拒绝它。要逐字部分接受建议，请按 `Ctrl/⌘ →`。要拒绝建议，只需继续输入，或使用 `Escape` 取消/隐藏建议。
+
+每次按键或光标移动时，Cursor 将尝试根据您最近的更改提出建议。然而，Cursor 并不总是会显示建议；有时模型预测没有需要更改的内容。
+
+Cursor 可以对您当前行上方一行到下方两行进行更改。
+
+### 切换
+
+要打开或关闭此功能，请将鼠标悬停在应用程序右下角状态栏上的 "Cursor Tab" 图标上。

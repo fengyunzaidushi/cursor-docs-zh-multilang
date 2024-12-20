@@ -1,0 +1,20 @@
+---
+title: 忽略文件
+---
+
+要忽略要包含在光标功能中的文件，例如 [代码库索引](/context/codebase-indexing)，您可以在项目根目录中使用 `.cursorignore` 文件。它的工作方式与 `.gitignore` 对 git 的工作方式相同。
+
+`.cursorignore` 尊重 `.gitignore`。如果您已经有 `.gitignore`，则默认情况下将忽略这些文件。如果您想忽略其他文件，可以将它们添加到 `.cursorignore` 文件中。
+
+### 示例 `.cursorignore` 文件
+
+```
+# 忽略 `dist` 目录中的所有文件
+dist/
+
+# 忽略所有 `.log` 文件
+*.log
+
+# 忽略特定文件 `config.json`
+config.json
+```
