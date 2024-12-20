@@ -204,7 +204,7 @@ export function DocsSidebarNav({
                           className={cn(
                             "flex w-full items-center rounded-md p-2 text-sm hover:underline",
                             pathname === formattedPath
-                              ? "font-medium text-primary"
+                              ? "text-gray-950 dark:text-gray-50 items-center cursor-pointer flex-grow font-semibold flex bg-gray-950/[0.1] dark:bg-gray-50/[0.1]"
                               : "text-muted-foreground"
                           )}
                           aria-current={pathname === formattedPath ? 'page' : undefined}

@@ -38,10 +38,10 @@ interface SiteMetadata {
 }
 
 const siteMetadata: SiteMetadata = {
-  title: "ship saas one click",
+  title: "Cursor AI",
   author: "Atalas",
-  headerTitle: "SHIP SAAS 1-CLICK ",
-  description: "deploy your saas website in one click",
+  headerTitle: "Cursor AI",
+  description: "Cursor AI",
   language: "en-us",
   theme: "system", // system, dark or light
   siteUrl:
